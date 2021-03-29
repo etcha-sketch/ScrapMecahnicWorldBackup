@@ -317,6 +317,6 @@ function ShowMenu
     else { Write-host "`n`nPlease make a valid selection" -foregroundcolor red;  start-sleep -seconds 2; ShowMenu }
 }
 ShowMenu
-Write-Host "`n`nThanks for using etcha-sketch`s Scrap Mechanic Backup Tool!"
+Write-Host "`n`nThanks for using etcha-sketch`'s Scrap Mechanic Backup Tool!"
 Write-host "Visit https://github.com/etcha-sketch for more useful tools."
 start-sleep -seconds 5
