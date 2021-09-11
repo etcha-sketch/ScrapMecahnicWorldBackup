@@ -263,7 +263,7 @@ function RestoreScrapMechanicSurvivalWolrds
         if ($restoreworldconfirm -ieq "y")
         {
             Write-host "Please wait. Restoring world now."
-            Push-Location $folderdir.Replace('\Save\Survival\Backups','\Save')
+            Push-Location $folderdir.Replace('\Save\Survival\Backups','\Save\Survival')
             Get-ChildItem *.db | Where-Object Name -eq "$($uniqueworlds[$worldindex]).db" | Remove-Item
             start-sleep -seconds 1
             copy-item $restorepoint.FullName "$($uniqueworlds[$worldindex]).db"
