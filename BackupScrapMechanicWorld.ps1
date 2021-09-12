@@ -127,7 +127,7 @@ function RestoreScrapMechanicCreativeWolrds
         $worldindex = $userchoice - 1
         Write-host "`n`nRestoring the $($uniqueworlds[$worldindex]) world.`n"
 
-        $restorepoints = Get-ChildItem *.db | Where-Object Name -like "$($uniqueworlds[$worldindex])*"
+        $restorepoints = Get-ChildItem *.db | Where-Object Name -like "$($uniqueworlds[$worldindex])*" | Sort-Object -Property LastWriteTime
         if ($restorepoints.Count -eq 1)
         {
             Write-host "Only 1 restore point available from $(($restorepoints.name.replace("$($uniqueworlds[$worldindex])_",'')).Replace('.db',''))`n"
@@ -230,7 +230,7 @@ function RestoreScrapMechanicSurvivalWolrds
         $worldindex = $userchoice - 1
         Write-host "`n`nRestoring the $($uniqueworlds[$worldindex]) world.`n"
 
-        $restorepoints = Get-ChildItem *.db | Where-Object Name -like "$($uniqueworlds[$worldindex])*"
+        $restorepoints = Get-ChildItem *.db | Where-Object Name -like "$($uniqueworlds[$worldindex])*" | Sort-Object -Property LastWriteTime
         if ($restorepoints.Count -eq 1)
         {
             Write-host "Only 1 restore point available from $(($restorepoints.name.replace("$($uniqueworlds[$worldindex])_",'')).Replace('.db',''))`n"
